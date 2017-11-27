@@ -4,7 +4,19 @@ function main {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  uname -a
+  export GOPATH="$shome"
+
+  cd "$shome"
+
+  if [[ ! -d "$shome/src/github.com/gliderlabs/registrator" ]]; then
+    git clone -b v7 git@github.com:gliderlabs/registrator "$shome/src/github.com/gliderlabs/registrator"
+  fi
+
+  if [[ ! -d "$shome/src/github.com/ugorji/go" ]]; then
+    git clone -b 8c0409f git@github.com:gliderlabs/registrator "$shome/src/github.com/ugorji/go"
+  fi
+
+  go get github.com/gliderlabs/registrator
 }
 
 main "$@"
