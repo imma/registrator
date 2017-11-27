@@ -1,0 +1,1 @@
+content/registrator.md
