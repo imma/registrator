@@ -9,7 +9,7 @@ function main {
   cd "$shome"
 
   if [[ ! -d "$shome/src/github.com/gliderlabs/registrator" ]]; then
-    git clone -b v7 git@github.com:gliderlabs/registrator "$shome/src/github.com/gliderlabs/registrator"
+    git clone -b "v${REGISTRATOR_VERSION}" git@github.com:gliderlabs/registrator "$shome/src/github.com/gliderlabs/registrator"
   fi
 
   if [[ ! -d "$shome/src/github.com/ugorji/go" ]]; then
