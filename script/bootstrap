@@ -9,7 +9,7 @@ function main {
   cd "$shome"
 
   if [[ ! -d "$shome/src/github.com/gliderlabs/registrator" ]]; then
-    git clone -b git@github.com:gliderlabs/registrator "$shome/src/github.com/gliderlabs/registrator"
+    git clone git@github.com:gliderlabs/registrator "$shome/src/github.com/gliderlabs/registrator"
   fi
   pushd "$shome/src/github.com/gliderlabs/registrator"
   git fetch
